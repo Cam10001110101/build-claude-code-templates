@@ -1,0 +1,28 @@
+{
+  "name": "research-tools-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for web research and content analysis tools",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "firecrawl": "^1.0.0",
+    "cheerio": "^1.0.0",
+    "axios": "^1.6.0",
+    "puppeteer": "^21.0.0",
+    "google-trends-api": "^4.9.2",
+    "sentiment": "^5.0.2",
+    "dotenv": "^16.4.7",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.6",
+    "typescript": "^5.3.3",
+    "tsx": "^4.19.2"
+  }
+}
