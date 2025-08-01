@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Deep Research Team Architecture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .agent-card {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 0;
+            overflow: hidden;
+            background-color: white;
+        }
+        
+        .agent-header {
+            color: white;
+            padding: 8px 12px;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        .agent-content {
+            padding: 10px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        
+        .agent-section {
+            margin-bottom: 8px;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 3px;
+            color: #333;
+        }
+        
+        .section-content {
+            color: #666;
+        }
+        
+        /* Agent Colors */
+        .orchestrator .agent-header { background-color: #FF6B6B; }
+        .clarifier .agent-header { background-color: #4ECDC4; }
+        .brief-generator .agent-header { background-color: #45B7D1; }
+        .coordinator .agent-header { background-color: #96CEB4; }
+        .academic .agent-header { background-color: #FFEAA7; }
+        .technical .agent-header { background-color: #DDA0DD; }
+        .data-analyst .agent-header { background-color: #FFB6C1; }
+        .synthesizer .agent-header { background-color: #98FB98; }
+        .report-gen .agent-header { background-color: #F0E68C; }
+        
+        /* Light background colors for content */
+        .orchestrator .agent-content { background-color: #FFE8E8; }
+        .clarifier .agent-content { background-color: #E8F8F6; }
+        .brief-generator .agent-content { background-color: #E8F4F8; }
+        .coordinator .agent-content { background-color: #F0F8F4; }
+        .academic .agent-content { background-color: #FFFEF0; }
+        .technical .agent-content { background-color: #F8F0F8; }
+        .data-analyst .agent-content { background-color: #FFF8F8; }
+        .synthesizer .agent-content { background-color: #F8FFF8; }
+        .report-gen .agent-content { background-color: #FFFEF8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="agent-grid">
+            <div class="agent-card orchestrator">
+                <div class="agent-header">Research Orchestrator</div>
+                <div class="agent-content">
+                    <div class="agent-section">
+                        <div class="section-title">System Prompt</div>
+                        <div class="section-content">1 Tools</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Context Window</div>
+                        <div class="section-content">Context Window</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Purpose</div>
+                        <div class="section-content">
+                            Master workflow coordination across all research phases.
+                            Quality gates and validation.
+                            State management throughout project.
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Diagnose</div>
+                        <div class="section-content">
+                            Orchestration
+                            Coordination
+                            Quality Control
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Tools</div>
+                        <div class="section-content">All Tools</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agent-card clarifier">
+                <div class="agent-header">Query Clarifier</div>
+                <div class="agent-content">
+                    <div class="agent-section">
+                        <div class="section-title">System Prompt</div>
+                        <div class="section-content">1 Tools</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Context Window</div>
+                        <div class="section-content">Context Window</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Purpose</div>
+                        <div class="section-content">
+                            Analyzes research queries for clarity.
+                            Confidence scoring system.
+                            Structured clarification questions.
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Diagnose</div>
+                        <div class="section-content">
+                            Query Analysis
+                            Clarification
+                            Focus Definition
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Tools</div>
+                        <div class="section-content">Basic Tools</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agent-card brief-generator">
+                <div class="agent-header">Research Brief Generator</div>
+                <div class="agent-content">
+                    <div class="agent-section">
+                        <div class="section-title">System Prompt</div>
+                        <div class="section-content">1 Tools</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Context Window</div>
+                        <div class="section-content">Context Window</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Purpose</div>
+                        <div class="section-content">
+                            Structured research planning.
+                            Specific research questions.
+                            Success criteria definition.
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Diagnose</div>
+                        <div class="section-content">
+                            Planning
+                            Strategy
+                            Framework
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Tools</div>
+                        <div class="section-content">Basic Tools</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agent-card coordinator">
+                <div class="agent-header">Research Coordinator</div>
+                <div class="agent-content">
+                    <div class="agent-section">
+                        <div class="section-title">System Prompt</div>
+                        <div class="section-content">1 Tools</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Context Window</div>
+                        <div class="section-content">Context Window</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Purpose</div>
+                        <div class="section-content">
+                            Task allocation strategy.
+                            Parallel research coordination.
+                            Resource optimization.
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Diagnose</div>
+                        <div class="section-content">
+                            Coordination
+                            Strategy
+                            Resource Management
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Tools</div>
+                        <div class="section-content">ChromaDB Tools</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agent-card academic">
+                <div class="agent-header">Academic Researcher</div>
+                <div class="agent-content">
+                    <div class="agent-section">
+                        <div class="section-title">System Prompt</div>
+                        <div class="section-content">1 Tools</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Context Window</div>
+                        <div class="section-content">Context Window</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Purpose</div>
+                        <div class="section-content">
+                            Academic database searching.
+                            Peer-review verification.
+                            Citation analysis and formatting.
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Diagnose</div>
+                        <div class="section-content">
+                            Academic Research
+                            Citation Analysis
+                            Quality Assessment
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Tools</div>
+                        <div class="section-content">Full Tools</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agent-card technical">
+                <div class="agent-header">Technical Researcher</div>
+                <div class="agent-content">
+                    <div class="agent-section">
+                        <div class="section-title">System Prompt</div>
+                        <div class="section-content">1 Tools</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Context Window</div>
+                        <div class="section-content">Context Window</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Purpose</div>
+                        <div class="section-content">
+                            Code repository analysis.
+                            Technical documentation review.
+                            Implementation feasibility.
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Diagnose</div>
+                        <div class="section-content">
+                            Technical Analysis
+                            Code Review
+                            Implementation
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Tools</div>
+                        <div class="section-content">All Tools</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agent-card data-analyst">
+                <div class="agent-header">Data Analyst</div>
+                <div class="agent-content">
+                    <div class="agent-section">
+                        <div class="section-title">System Prompt</div>
+                        <div class="section-content">1 Tools</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Context Window</div>
+                        <div class="section-content">Context Window</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Purpose</div>
+                        <div class="section-content">
+                            Statistical analysis.
+                            Trend identification.
+                            Data visualization suggestions.
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Diagnose</div>
+                        <div class="section-content">
+                            Data Analysis
+                            Statistics
+                            Visualization
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Tools</div>
+                        <div class="section-content">All Tools</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agent-card synthesizer">
+                <div class="agent-header">Research Synthesizer</div>
+                <div class="agent-content">
+                    <div class="agent-section">
+                        <div class="section-title">System Prompt</div>
+                        <div class="section-content">1 Tools</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Context Window</div>
+                        <div class="section-content">Context Window</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Purpose</div>
+                        <div class="section-content">
+                            Multi-source consolidation.
+                            Pattern identification.
+                            Nuance preservation.
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Diagnose</div>
+                        <div class="section-content">
+                            Synthesis
+                            Analysis
+                            Integration
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Tools</div>
+                        <div class="section-content">All Tools</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agent-card report-gen">
+                <div class="agent-header">Report Generator</div>
+                <div class="agent-content">
+                    <div class="agent-section">
+                        <div class="section-title">System Prompt</div>
+                        <div class="section-content">1 Tools</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Context Window</div>
+                        <div class="section-content">Context Window</div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Purpose</div>
+                        <div class="section-content">
+                            Professional report structuring.
+                            Citation formatting.
+                            Executive summary creation.
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Diagnose</div>
+                        <div class="section-content">
+                            Report Writing
+                            Formatting
+                            Documentation
+                        </div>
+                    </div>
+                    <div class="agent-section">
+                        <div class="section-title">Tools</div>
+                        <div class="section-content">All Tools</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

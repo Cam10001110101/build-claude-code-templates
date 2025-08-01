@@ -1,0 +1,48 @@
+{
+  "content_id": "claude-35-launch",
+  "platforms": {
+    "twitter": {
+      "posts": [
+        "🚀 BREAKING: Claude 3.5 Sonnet is here!\n\n• 2x faster than our previous best\n• Outperforms GPT-4o on coding (64% vs 38%)\n• Free on http://claude.ai\n• 200K context window\n\nThe most intelligent Claude yet. Try it now ↓",
+        "What makes Claude 3.5 Sonnet special?\n\n🎯 Graduate-level reasoning\n💻 64% problem-solving in code evals\n👁️ Advanced vision capabilities\n⚡ 2x speed of Claude 3 Opus\n💰 Just $3/1M input tokens\n\nEnterprise-ready AI that actually understands nuance.",
+        "Just tested Claude 3.5 Sonnet's vision capabilities:\n\n✅ Transcribes imperfect handwriting\n✅ Interprets complex charts\n✅ Analyzes visual data\n✅ Understands UI mockups\n\nThis changes how we interact with visual information. 🤯"
+      ],
+      "thread": {
+        "tweets": [
+          "1/5 🧵 Why Claude 3.5 Sonnet matters for developers:\n\nWe just launched our most capable model yet, and the numbers speak for themselves.",
+          "2/5 Performance gains:\n• 64% on HumanEval (vs 38% for competitors)\n• 2x faster processing\n• Better at debugging & code translation\n• Understands complex codebases",
+          "3/5 Real-world impact:\n\n🔧 Multi-step workflows\n🔄 Legacy code migration\n📊 Data analysis & visualization\n🤝 Context-sensitive support\n\nAll with improved speed and accuracy.",
+          "4/5 Vision capabilities are game-changing:\n\n• Read charts & graphs\n• Transcribe messy handwriting\n• Analyze UI designs\n• Extract data from images\n\nPerfect for automating visual tasks.",
+          "5/5 Available now:\n\n🆓 Free on http://claude.ai\n📱 iOS app updated\n🏢 API access ready\n💳 $3/1M input tokens\n\nWhat will you build? Share your ideas below! 👇"
+        ]
+      },
+      "hashtags": ["#AI", "#Claude35", "#AIEngineering", "MachineLearning"]
+    },
+    "linkedin": {
+      "post": "Exciting news in AI: Anthropic just launched Claude 3.5 Sonnet 🎉\n\nAfter months of development, we're proud to introduce our most intelligent model yet. Here's what makes it special:\n\n📊 Performance Metrics:\n• 2x faster than Claude 3 Opus\n• 64% success rate on coding problems (industry-leading)\n• Superior graduate-level reasoning\n• Enhanced visual understanding\n\n💼 Enterprise Applications:\n• Context-sensitive customer support that actually understands nuance\n• Multi-step workflow orchestration for complex tasks\n• Code translation and migration at scale\n• Visual data interpretation from charts, graphs, and documents\n\n💡 What This Means for Business:\nClaude 3.5 Sonnet isn't just faster—it's smarter about understanding context, maintaining consistency, and delivering results that feel human-crafted. Whether you're automating customer interactions or building internal tools, this model raises the bar.\n\n🚀 Availability:\n• Free tier on claude.ai\n• API access at $3/1M input tokens\n• 200K token context window\n• iOS app updated\n\nWe're seeing early adopters use it for everything from legal document analysis to creative campaign generation. The combination of speed, intelligence, and vision capabilities opens new possibilities.\n\nWhat challenges in your organization could benefit from more intelligent AI? I'd love to hear your thoughts below.\n\n#ArtificialIntelligence #Innovation #Technology #Enterprise #FutureOfWork",
+      "cta": "Try Claude 3.5 Sonnet free at claude.ai"
+    },
+    "instagram": {
+      "caption": "🤖 Meet Claude 3.5 Sonnet - AI that actually gets it\n\n✨ 2x faster than before\n🧠 Outperforms on reasoning tests\n💻 64% coding accuracy\n👁️ Reads images & handwriting\n🆓 Try free at claude.ai\n\nWe built Claude 3.5 to understand nuance, humor, and context like never before. From debugging code to analyzing charts, it's ready to transform how you work.\n\nWhat would you create with smarter AI? Drop your ideas below! 💭\n\nSwipe for performance comparisons →\n.\n.\n.\n#Claude35 #ArtificialIntelligence #AI #TechInnovation #FutureOfWork #AITools #MachineLearning #TechNews #Innovation #Anthropic",
+      "story_ideas": [
+        "Poll: 'What AI task do you struggle with most?'",
+        "Behind-the-scenes: How we tested Claude 3.5",
+        "Quick demo: Claude reading handwritten notes",
+        "Comparison chart: Claude 3.5 vs others"
+      ],
+      "reel_hook": "POV: Your AI assistant just got 2x smarter overnight 🚀"
+    }
+  },
+  "metadata": {
+    "target_audience": "Developers, tech professionals, AI enthusiasts",
+    "tone": "Excited but professional",
+    "key_message": "Claude 3.5 Sonnet is faster, smarter, and more capable",
+    "call_to_action": "Try it free at claude.ai",
+    "visual_suggestions": [
+      "Performance comparison charts",
+      "Code example screenshots",
+      "Vision capability demos",
+      "Speed comparison animations"
+    ]
+  }
+}

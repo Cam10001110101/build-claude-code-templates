@@ -1,0 +1,139 @@
+{
+  "twitter": {
+    "single_post": {
+      "structure": "[Hook] [Core Message] [Supporting Detail] [CTA/Question] [1-2 Hashtags]",
+      "example": "🚀 Just discovered the #1 reason startups fail isn't funding—it's timing.\n\nOur analysis of 100 failed startups revealed 73% launched too early or too late.\n\nWhat's your take on perfect timing? 🤔\n\n#StartupLife #Entrepreneurship",
+      "character_limit": 280,
+      "best_practices": [
+        "Front-load the most important information",
+        "Use line breaks for readability",
+        "Include 1-2 relevant hashtags only",
+        "Add emojis sparingly for visual appeal",
+        "End with engagement driver"
+      ]
+    },
+    "thread": {
+      "structure": {
+        "tweet_1": "[Number]/[Total] [Hook Statement]",
+        "tweet_2-n": "[Number]/ [Supporting Point] [Evidence/Example]",
+        "final_tweet": "[Number]/ [Conclusion] [CTA] [Link]"
+      },
+      "example": [
+        "1/5 The future of work isn't remote or office—it's something entirely different 🧵",
+        "2/5 We surveyed 500 companies and found 67% are adopting 'work from anywhere' policies, but with a twist: mandatory quarterly gatherings",
+        "3/5 The data shows:\n• 23% productivity increase\n• 45% better retention\n• 89% report improved work-life balance\n\nBut there's a catch...",
+        "4/5 The catch? It only works with:\n✓ Async-first communication\n✓ Clear documentation\n✓ Trust-based culture\n✓ Results-focused KPIs",
+        "5/5 Companies making this shift see 3x revenue growth.\n\nWant the full report? Check out our latest analysis:\n[Link]\n\nWhat's your ideal work setup? 👇"
+      ],
+      "best_practices": [
+        "Number each tweet clearly",
+        "Maintain narrative flow",
+        "Use cliffhangers between tweets",
+        "Include data/examples in middle tweets",
+        "Strong CTA in final tweet"
+      ]
+    }
+  },
+  "linkedin": {
+    "thought_leadership": {
+      "structure": "[Hook/Question]\n\n[Personal Anecdote/Context]\n\n[Key Insight/Data]\n\n[Lessons/Takeaways with bullets]\n\n[Question for engagement]",
+      "example": "Have you ever wondered why some teams consistently outperform others?\n\nLast week, I sat in on a meeting with our top-performing team. What I observed challenged everything I thought I knew about productivity.\n\nInstead of packed calendars and constant hustle, I found:\n\n• 2-hour blocks of uninterrupted work\n• 15-minute walking meetings\n• No meetings on Wednesdays\n• Mandatory 'thinking time'\n\nThe result? This team delivers 3x more than our busiest team.\n\nKey lessons I'm implementing:\n\n→ Protect deep work time fiercely\n→ Question every recurring meeting\n→ Measure outputs, not hours\n→ Trust your team completely\n\nWhat unconventional productivity methods work for your team?\n\n#Leadership #ProductivityHacks #TeamManagement",
+      "character_limit": 3000,
+      "best_practices": [
+        "Start with relatable question",
+        "Share personal experience",
+        "Include concrete data",
+        "Use bullets for scanability",
+        "Professional but conversational tone"
+      ]
+    },
+    "announcement": {
+      "structure": "[Exciting news line]\n\n[Context/Journey]\n\n[Announcement details]\n\n[What this means]\n\n[Thank yous]\n\n[CTA]",
+      "example": "🎉 Thrilled to announce: We've just closed our Series B funding of $50M!\n\nTwo years ago, we started with a simple mission: make data accessible to everyone. Today, we're serving 10,000+ companies worldwide.\n\nThis funding, led by Andreessen Horowitz, will help us:\n\n📊 Launch our AI-powered analytics suite\n🌍 Expand to 15 new markets\n👥 Double our engineering team\n🚀 Accelerate product development\n\nBut this isn't just about us—it's about you, our community. Your feedback and support have shaped every feature we've built.\n\nSpecial thanks to our investors, team, and especially our customers who believed in our vision.\n\nWe're just getting started. Join us on this journey: [Link]\n\n#StartupNews #TechInnovation #GrowthStory",
+      "best_practices": [
+        "Lead with the news",
+        "Show the journey",
+        "Be specific about impact",
+        "Include gratitude",
+        "End with invitation"
+      ]
+    }
+  },
+  "instagram": {
+    "carousel": {
+      "structure": {
+        "slide_1": "[Hook/Question]",
+        "slide_2-n": "[One key point per slide]",
+        "final_slide": "[CTA/Summary]"
+      },
+      "caption_structure": "[Hook] [Main value prop] [3-5 bullets] [Personal note] [CTA] [...] [Hashtags]",
+      "example_caption": "Stop scrolling if you're tired of boring presentations 🛑\n\nHere are 5 design tricks that'll make your slides impossible to ignore.\n\n💡 The 10-20-30 rule\n🎨 Color psychology hacks\n📊 Data visualization secrets\n🔤 Typography that pops\n✨ Animation sweet spots\n\nI used to spend HOURS on presentations that put people to sleep. These tricks changed everything.\n\nWhich one will you try first? Let me know below! 👇\n.\n.\n.\n#PresentationDesign #BusinessTips #DesignHacks #ProfessionalDevelopment #CreativeStrategy",
+      "best_practices": [
+        "Hook in first 125 characters",
+        "One concept per slide",
+        "Consistent visual style",
+        "Hide hashtags after dots",
+        "Include save-worthy value"
+      ]
+    },
+    "reel": {
+      "caption_structure": "[Hook question or statement] [Brief context] [CTA]",
+      "example": "POV: You finally found the perfect productivity system 🤯\n\nAfter trying 20+ methods, this one actually sticks!\n\nSave this for Monday motivation ⚡️",
+      "best_practices": [
+        "Ultra-short and punchy",
+        "Match trending audio",
+        "Front-load the hook",
+        "Use POV format when relevant",
+        "Include save reminder"
+      ]
+    }
+  },
+  "cross_platform": {
+    "content_adaptation_rules": {
+      "twitter_to_linkedin": [
+        "Expand abbreviated thoughts",
+        "Add professional context",
+        "Include more data/evidence",
+        "Adjust tone to be more formal",
+        "Remove Twitter-specific elements"
+      ],
+      "linkedin_to_twitter": [
+        "Extract core message",
+        "Create thread from sections",
+        "Simplify language",
+        "Add urgency/excitement",
+        "Break into bite-sized pieces"
+      ],
+      "any_to_instagram": [
+        "Create visual-first content",
+        "Simplify to key points",
+        "Add lifestyle angle",
+        "Include emotional hook",
+        "Design for mobile viewing"
+      ]
+    }
+  },
+  "engagement_drivers": {
+    "questions": [
+      "What's your experience with [topic]?",
+      "Agree or disagree?",
+      "What would you add to this list?",
+      "Have you tried this approach?",
+      "What's working for you?"
+    ],
+    "ctas": [
+      "Share if you found this helpful",
+      "Save for later reference",
+      "Tag someone who needs this",
+      "Drop your thoughts below",
+      "Follow for more [topic] insights"
+    ],
+    "hooks": [
+      "Unpopular opinion:",
+      "Stop doing [common practice]",
+      "The hidden truth about [topic]",
+      "[Number] things I wish I knew earlier",
+      "Why [common belief] is wrong"
+    ]
+  }
+}

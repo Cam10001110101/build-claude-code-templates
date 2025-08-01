@@ -1,0 +1,69 @@
+{
+  "schedule_id": "schedule-001",
+  "content_id": "claude-35-launch",
+  "created_by": "social-media-scheduler",
+  "scheduling_strategy": "product_launch_immediate",
+  "scheduled_posts": [
+    {
+      "platform": "twitter",
+      "post_type": "announcement",
+      "scheduled_time": "2025-08-01T09:00:00-05:00",
+      "timezone": "EST",
+      "content": "posts[0]",
+      "rationale": "9 AM EST captures East Coast morning browse and West Coast early birds"
+    },
+    {
+      "platform": "linkedin",
+      "post_type": "thought_leadership",
+      "scheduled_time": "2025-08-01T10:30:00-05:00",
+      "timezone": "EST",
+      "content": "full_post",
+      "rationale": "Mid-morning professional audience peak engagement"
+    },
+    {
+      "platform": "twitter",
+      "post_type": "thread",
+      "scheduled_time": "2025-08-01T12:00:00-05:00",
+      "timezone": "EST",
+      "content": "thread",
+      "rationale": "Lunch break browsing for detailed content consumption"
+    },
+    {
+      "platform": "instagram",
+      "post_type": "carousel",
+      "scheduled_time": "2025-08-01T17:00:00-05:00",
+      "timezone": "EST",
+      "content": "main_post",
+      "rationale": "Evening commute and after-work browsing peak"
+    },
+    {
+      "platform": "twitter",
+      "post_type": "follow_up",
+      "scheduled_time": "2025-08-02T14:00:00-05:00",
+      "timezone": "EST",
+      "content": "posts[1]",
+      "rationale": "Next day follow-up to maintain momentum"
+    },
+    {
+      "platform": "instagram",
+      "post_type": "story",
+      "scheduled_time": "2025-08-02T19:00:00-05:00",
+      "timezone": "EST",
+      "content": "story_poll",
+      "rationale": "Prime story viewing time for engagement"
+    }
+  ],
+  "campaign_notes": {
+    "strategy": "Immediate launch with sustained follow-up",
+    "priority_platforms": ["twitter", "linkedin"],
+    "expected_reach": "High - major product announcement",
+    "monitoring_required": "Real-time for first 24 hours"
+  },
+  "conflicts_resolved": [],
+  "optimization_applied": [
+    "Staggered posting to avoid platform cannibalization",
+    "Peak time selection based on tech audience behavior",
+    "Thread scheduled during high engagement window",
+    "Follow-up content to maintain visibility"
+  ]
+}

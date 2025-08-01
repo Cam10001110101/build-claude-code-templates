@@ -1,0 +1,86 @@
+{
+  "tracking_id": "track-001",
+  "content_id": "claude-35-launch",
+  "campaign_name": "Claude 3.5 Sonnet Launch",
+  "created_by": "social-media-analyzer",
+  "tracking_setup": {
+    "start_date": "2025-08-01T09:00:00-05:00",
+    "end_date": "2025-08-08T23:59:59-05:00",
+    "check_frequency": "hourly_first_24h_then_daily",
+    "alert_thresholds": {
+      "viral_indicator": {
+        "engagement_rate": 10,
+        "share_velocity": 50
+      },
+      "underperformance": {
+        "engagement_rate": 1,
+        "reach": 1000
+      }
+    }
+  },
+  "metrics_to_track": {
+    "twitter": [
+      "impressions",
+      "engagement_rate",
+      "retweets",
+      "quote_tweets",
+      "profile_visits",
+      "link_clicks",
+      "thread_completion_rate"
+    ],
+    "linkedin": [
+      "impressions",
+      "engagement_rate",
+      "reactions_by_type",
+      "comments",
+      "shares",
+      "click_through_rate",
+      "follower_growth"
+    ],
+    "instagram": [
+      "reach",
+      "impressions",
+      "saves",
+      "shares",
+      "story_completion",
+      "profile_visits",
+      "website_clicks"
+    ]
+  },
+  "benchmark_targets": {
+    "twitter": {
+      "engagement_rate": 3.5,
+      "impressions": 50000
+    },
+    "linkedin": {
+      "engagement_rate": 5.0,
+      "impressions": 20000
+    },
+    "instagram": {
+      "engagement_rate": 4.0,
+      "reach": 15000
+    }
+  },
+  "reporting_schedule": [
+    {
+      "type": "real_time",
+      "period": "first_6_hours",
+      "focus": "viral_indicators"
+    },
+    {
+      "type": "daily_summary",
+      "time": "09:00",
+      "period": "first_week"
+    },
+    {
+      "type": "campaign_analysis",
+      "delivery": "2025-08-08",
+      "format": "comprehensive_report"
+    }
+  ],
+  "optimization_triggers": [
+    "If engagement < 50% of benchmark, analyze and suggest improvements",
+    "If viral indicators met, recommend amplification strategy",
+    "Track best performing content elements for future campaigns"
+  ]
+}

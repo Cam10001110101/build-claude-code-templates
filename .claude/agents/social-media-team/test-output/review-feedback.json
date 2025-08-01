@@ -1,0 +1,45 @@
+{
+  "review_id": "review-001",
+  "content_id": "claude-35-launch",
+  "reviewer": "social-media-reviewer",
+  "timestamp": "2025-08-01T10:45:00Z",
+  "status": "approved_with_suggestions",
+  "overall_assessment": {
+    "brand_alignment": 9.5,
+    "accuracy": 10,
+    "engagement_potential": 9,
+    "risk_level": "low"
+  },
+  "feedback": {
+    "strengths": [
+      "Excellent use of concrete metrics and comparisons",
+      "Clear value proposition across all platforms",
+      "Platform-specific optimization well executed",
+      "Strong CTAs throughout"
+    ],
+    "suggestions": [
+      {
+        "platform": "twitter",
+        "type": "enhancement",
+        "current": "Try it now ↓",
+        "suggested": "Try it now → claude.ai",
+        "reason": "More specific CTA with direct link"
+      },
+      {
+        "platform": "linkedin",
+        "type": "addition",
+        "suggestion": "Consider adding a specific enterprise use case example",
+        "reason": "LinkedIn audience appreciates concrete business scenarios"
+      }
+    ],
+    "required_changes": []
+  },
+  "compliance_check": {
+    "accuracy_verified": true,
+    "claims_substantiated": true,
+    "competitive_mentions_appropriate": true,
+    "legal_compliance": "passed",
+    "brand_guidelines": "passed"
+  },
+  "approval_notes": "High-quality content ready for scheduling. Consider the minor enhancements suggested for maximum impact."
+}

@@ -4,200 +4,175 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Common Development Commands
 
-### Development and Testing
+### Agent Testing
 ```bash
-# Start LangGraph server (in-memory)
-yarn langgraph:in_mem:up
-# Alternative with persistent storage
-yarn langgraph:up
+# Test a specific agent
+@agent-name perform task
 
-# Run unit tests
-yarn test
+# List all available agents
+/agents
 
-# Run integration tests  
-yarn test:int
-
-# Run single test file
-yarn test:single <test-file-pattern>
-
-# Run all tests and linting
-yarn test:all
-
-# Build TypeScript
-yarn build
-
-# Clean build artifacts
-yarn clean
+# Test the full workflow
+@workflow-orchestrator start social media campaign
 ```
 
-### Code Quality
+### Content Generation
 ```bash
-# Format code
-yarn format
+# Generate content from URL
+@content-creator create posts from [URL]
 
-# Check formatting
-yarn format:check
+# Research current trends
+@content-researcher find trending AI topics
 
-# Lint code
-yarn lint
+# Analyze performance
+@social-media-analyzer generate monthly report
 
-# Fix linting issues
-yarn lint:fix
-
-# Lint LangGraph JSON configuration
-yarn lint:langgraph-json
-
-# Run all linting
-yarn lint:all
-```
-
-### Graph Operations
-```bash
-# Generate a single post
-yarn generate_post
-
-# Start authentication server
-yarn start:auth
-
-# Manage cron jobs
-yarn cron:create
-yarn cron:delete
-yarn cron:list
-
-# Utility scripts
-yarn graph:backfill
-yarn get:scheduled_runs
-yarn get:used_links
-yarn graph:delete:run_thread
+# Schedule posts
+@social-media-scheduler queue content for publication
 ```
 
 ## High-Level Architecture
 
-This is a **LangGraph-based social media agent** that converts URLs into Twitter/LinkedIn posts using a human-in-the-loop workflow. The system follows a multi-agent architecture with specialized graphs for different tasks.
+This is a **Claude Code sub-agent team** that converts URLs into social media posts using native Claude Code tools and file-based coordination. The system has been refactored from LangGraph to use Claude Code's agent architecture.
 
-### Core Graph Structure
+### Core Agent Team Structure
 
-The system is built around **17 different LangGraph workflows** defined in `langgraph.json`:
+The system consists of **6 specialized agents** working together:
 
-1. **generate_post** - Main workflow for creating social media posts from URLs
-2. **supervisor** - Orchestrates data curation and bulk post generation
-3. **curate_data** - Fetches and processes content from various sources (Twitter, GitHub, Reddit, Slack)
-4. **ingest_data** - Handles data ingestion from external sources
-5. **repurposer** - Repurposes existing content into new posts
-6. **generate_thread** - Creates Twitter thread sequences
-7. **verify_tweet/verify_reddit_post** - Content validation workflows
-8. **reflection** - Post quality assessment and improvement
-9. **upload_post** - Handles posting to social platforms
-10. Various interrupt graphs for human-in-the-loop interactions
+1. **workflow-orchestrator** - Coordinates the entire social media workflow
+2. **content-researcher** - Researches trends and gathers source material
+3. **content-creator** - Generates platform-specific social media content
+4. **social-media-scheduler** - Manages posting timing and coordination
+5. **social-media-analyzer** - Analyzes performance and provides insights
+6. **social-media-reviewer** - Quality assurance and brand compliance
 
 ### Agent Architecture Pattern
 
-Each agent follows a consistent structure:
-- `index.ts` - Main graph definition and compilation
-- `nodes/` - Individual processing steps  
-- `state.ts` - State management and annotations
-- `types.ts` - Type definitions
-- `tests/` - Integration and unit tests
+Each agent follows a consistent Claude Code structure:
+- YAML frontmatter with `name`, `description`, and `tools`
+- Detailed system prompt defining capabilities and workflows
+- Specific tool permissions for focused functionality
+- JSON input/output structures for file-based coordination
 
 ### Data Flow
 
-1. **URL Ingestion** → Content extraction via FireCrawl
-2. **Content Verification** → Platform-specific validation (Twitter API, Reddit API, GitHub API)
-3. **Report Generation** → AI-powered content analysis and relevance scoring
-4. **Post Generation** → LLM-based post creation with style guidelines
-5. **Human Review** → Interrupt for approval/editing via Agent Inbox
-6. **Scheduling/Publishing** → Platform posting via Arcade or native APIs
+1. **URL Input** → Content extraction via WebFetch
+2. **Research Phase** → Trend analysis and competitive intelligence via WebSearch
+3. **Content Generation** → Multi-platform post creation using native LLM capabilities
+4. **Quality Review** → Brand compliance and optimization checks
+5. **Scheduling** → Optimal timing and cross-platform coordination
+6. **Analytics** → Performance tracking and insights generation
 
 ### Key Components
 
-#### State Management
-- Uses LangGraph `Annotation` pattern for type-safe state
-- Configurable parameters via `ConfigurableAnnotation`
-- State persistence across graph interruptions
+#### Native Tool Integration
+- **Read/Write**: File-based agent coordination and data persistence
+- **WebFetch/WebSearch**: Content research and trend analysis
+- **Task**: Sub-agent invocation and workflow orchestration
+- **TodoWrite**: Progress tracking and task management
+- **MCP Tools**: Platform-specific integrations (Twitter, URL validation)
 
-#### Content Processing Pipeline
-- **Loaders** (`src/agents/curate-data/loaders/`) - Platform-specific data fetching
-- **Verification** - Content validation and URL expansion
-- **Image Processing** - Screenshot capture and image selection
-- **Post Formatting** - Character limits, hashtags, mentions
+#### File-Based Coordination
+- **Input Files**: Research data, source URLs, content briefs
+- **Output Files**: Generated posts, analytics reports, scheduling plans
+- **Shared Data**: Brand guidelines, performance benchmarks, templates
+- **Status Tracking**: Progress files, error logs, approval workflows
 
-#### Authentication & APIs
-- **Arcade Integration** - Simplified social media auth
-- **OAuth Flows** - Twitter/LinkedIn developer account support
-- **Multi-platform Support** - Twitter, LinkedIn, Slack, GitHub, Reddit
+#### Platform Integration
+- **Native Claude Code Tools**: Replace complex LangGraph dependencies
+- **MCP Server Integration**: Twitter posting, URL validation, analytics
+- **Simplified Authentication**: Direct API integration without Arcade complexity
+- **Multi-platform Support**: Twitter, LinkedIn, Instagram, Reddit
 
 ### Integration Points
 
-#### External Services
-- **LangSmith** - Tracing and observability
-- **Anthropic/OpenAI** - Content generation LLMs
-- **Google Vertex AI** - YouTube content processing
-- **FireCrawl** - Web scraping and content extraction
-- **Supabase** - Image storage and metadata
-- **Playwright** - Screenshot automation
+#### File-Based Agent Communication
+```json
+{
+  "workflow": {
+    "orchestrator": "workflow-orchestrator.md",
+    "input_files": ["research-output.json", "content-brief.json"],
+    "output_files": ["final-posts.json", "analytics-report.json"],
+    "coordination": "sequential_with_parallel_optimization"
+  }
+}
+```
 
-#### Data Sources
-- Twitter (via API v2 and Arcade)
-- GitHub (trending repos, release notes)
-- Reddit (subreddit monitoring)
-- Slack (channel message ingestion)
-- YouTube (video summaries)
-- General web content (via FireCrawl)
+#### Agent Responsibilities
+- **Orchestrator**: Workflow management, agent coordination, progress tracking
+- **Researcher**: Trend analysis, competitive intelligence, source validation
+- **Creator**: Content generation, platform adaptation, brand alignment
+- **Scheduler**: Timing optimization, queue management, publication coordination
+- **Analyzer**: Performance tracking, insights generation, optimization recommendations
+- **Reviewer**: Quality assurance, compliance checking, final approval
 
-### Configuration Files
+### Workflow Examples
 
-- `langgraph.json` - Graph definitions and routing
-- `package.json` - Dependencies and scripts
-- `tsconfig.json` - TypeScript compilation settings
-- `jest.config.js` - Test configuration with ESM support
-- `.env` - Environment variables for API keys and settings
+#### Standard Content Generation
+1. Orchestrator receives URL and campaign requirements
+2. Researcher analyzes trends and gathers contextual information
+3. Creator generates platform-specific content variations
+4. Reviewer validates quality, brand compliance, and optimization
+5. Scheduler determines optimal posting times and coordinates publication
+6. Analyzer tracks performance and generates insights
 
-### Testing Strategy
+#### Urgent Content Publishing
+1. Orchestrator prioritizes urgent content request
+2. Creator generates time-sensitive posts with expedited review
+3. Reviewer performs critical compliance checks only
+4. Scheduler executes immediate publication across platforms
+5. Analyzer monitors real-time performance and engagement
 
-- **Unit Tests** (`.test.ts`) - Individual function testing
-- **Integration Tests** (`.int.test.ts`) - Full workflow testing with real APIs
-- **E2E Tests** - Complete user journey validation
-- Jest with TypeScript ESM support
-- 20-second default timeout for API-dependent tests
+### Configuration & Customization
 
-### Human-in-the-Loop Pattern
+#### Agent Configuration
+- Agent definitions in `.claude/agents/lang-social-media-team/agents/`
+- Tool permissions customizable per agent role
+- Brand guidelines and templates in shared reference files
+- Platform-specific formatting rules and constraints
 
-The system uses **interrupt-driven workflows** where:
-1. AI generates initial content
-2. Graph pauses at strategic points
-3. Human reviews via Agent Inbox UI
-4. User can approve, edit, or reject
-5. Graph resumes based on human input
+#### Content Templates
+- Post format templates for each platform
+- Brand voice and tone guidelines
+- Hashtag strategies and mention protocols
+- Visual content specifications and requirements
 
-### Performance Considerations
-
-- **Parallel Processing** - Uses LangGraph `Send` for concurrent operations
-- **Caching** - Stores processed URLs to avoid duplicate work
-- **Rate Limiting** - Respects API limits across platforms
-- **Memory Management** - In-memory mode for development, persistent for production
+#### Performance Optimization
+- Optimal posting time calculations
+- Engagement rate benchmarking
+- Content type performance analysis
+- Cross-platform coordination strategies
 
 ## Development Notes
 
 ### Environment Setup
-- Node.js 20+ required (specified in `langgraph.json`)
-- Yarn package manager (specified in `package.json`)
-- LangGraph CLI for local development
-- Multiple API keys required (see README.md for full list)
+- Claude Code CLI required for agent testing
+- Native tool integration (no external dependencies)
+- MCP server configuration for platform integrations
+- File-based workflow coordination
 
-### Testing Patterns
-- Use `cross-env TZ=America/Los_Angeles` for consistent timezone testing
-- Integration tests require real API credentials
-- Test data located in `src/tests/data/`
-- Mock responses available in test files
+### Agent Testing Patterns
+- Use `@agent-name` syntax to test individual agents
+- File-based input/output validation
+- Progress tracking via TodoWrite integration
+- Error handling and recovery workflows
 
 ### Customization Points
-- **Prompts** - Located in `src/agents/generate-post/prompts/`
-- **Business Context** - Update for different industries/use cases  
-- **Post Examples** - Modify few-shot examples for style changes
-- **Content Rules** - Adjust writing guidelines and structure
+- **Agent Prompts** - Modify system prompts in individual agent files
+- **Brand Guidelines** - Update shared reference files for consistency
+- **Platform Rules** - Adjust platform-specific formatting and constraints
+- **Workflow Logic** - Modify orchestrator coordination patterns
 
-### Graph Deployment
-- Supports both local development (`yarn dev`) and production deployment
-- Docker support with Playwright dependencies
-- Environment-based configuration switching
-- LangGraph Platform integration for scaling
+### Performance Considerations
+- **Parallel Processing** - Multiple agents can work simultaneously on different tasks
+- **File Caching** - Reuse research and analysis data across workflow runs
+- **Rate Limiting** - Built into MCP server integrations
+- **Error Recovery** - Each agent handles failures independently with fallback strategies
+
+### Migration from LangGraph
+This system has been refactored from a complex LangGraph-based architecture to use Claude Code's native agent system:
+- **Simplified Dependencies**: No LangGraph, LangSmith, or complex state management
+- **Native Tools**: Uses Claude Code's built-in Read, Write, WebFetch, WebSearch tools
+- **File Coordination**: Replaces LangGraph state with JSON file coordination
+- **Agent Specialization**: Each agent has focused responsibilities and clear interfaces
+- **Improved Maintainability**: Standard Claude Code patterns and documentation
